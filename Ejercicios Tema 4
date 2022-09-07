@@ -1,0 +1,17 @@
+//Usando un if, crear una condición que compare si la variable numeroIf es positivo,
+// negativo, o 0.
+
+public class main {
+    public static void main(String[] args) {
+        double variable = -0.58858;
+        if(variable > 0) {
+            System.out.println("Positivo");
+        } else if(variable == 0) {
+            System.out.println("Cero");
+        } else {
+            System.out.println("Negativo");
+        }
+            }
+        }
+        
+        
