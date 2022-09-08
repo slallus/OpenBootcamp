@@ -1,0 +1,35 @@
+public class main {
+    public static void main(String[] args) {
+
+        Persona persona = new Persona(); //CREAR UN OBJETO PERSONA EN EL MAIN
+        persona.setEdad(24); //SET PARA DAR VALORES
+        persona.setNombre("Alba");
+        persona.setTelefono(112);
+        System.out.println(persona.getEdad()); //GET PARA MOSTRAR LOS VALORES
+        System.out.println(persona.getNombre());
+        System.out.println(persona.getTelefono());
+    }
+}
+
+class Persona { //CREAR CLASE PERSONA
+    private int edad; //CREAR VARIABLES PRIVADAS PARA LA CLASE PERSONA
+    private String nombre;
+    private int telefono;
+
+    public void setEdad(int edad) { //SETTER
+        this.edad = edad;}
+    public int getEdad() { //GETTER
+        return this.edad;}
+
+    public void setNombre(String nombre) { //SETTER
+        this.nombre = nombre;}
+    public String getNombre() { //GETTER
+        return this.nombre;}
+
+    public void setTelefono(int telefono) { //SETTER
+        this.telefono = telefono;}
+    public int getTelefono() { //GETTER
+        return this.telefono;}
+
+
+}
