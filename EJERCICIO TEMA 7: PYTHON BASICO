@@ -1,0 +1,27 @@
+
+
+#main.py
+import operaciones
+
+
+def main():
+    resSuma = operaciones.suma(2,2)
+    resResta = operaciones.resta(2,2)
+    resMultiplicar = operaciones.multiplicar(2,2)
+    resDividir = operaciones.dividir(2,2)
+    print("hola", resSuma, resResta, resMultiplicar, resDividir)
+
+
+#operaciones.py
+
+def suma(a, b):
+    return a + b
+
+def resta(a, b):
+    return a - b
+
+def multiplicar(a,b):
+    return a * b
+
+def dividir(a,b):
+    return a/ b
