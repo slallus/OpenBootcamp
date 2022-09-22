@@ -1,0 +1,15 @@
+Crea un script que le pida al usuario una lista de países (separados por comas). 
+Éstos se deben almacenar en una lista. No debería haber países repetidos (haz uso de set). 
+Finalmente, muestra por consola la lista de países ordenados alfabéticamente y separados por comas.
+
+
+print('¿Cuales son tus paises favoritos?')
+paises = {input('Tu pais favorito 1: '),
+          input('Tu pais favorito 2: '),
+          input('Tu pais favorito 3: '),
+          input('Tu pais favorito 4: ')}
+
+p_favoritos = list(sorted(set(paises)))
+print(p_favoritos)
+
+
