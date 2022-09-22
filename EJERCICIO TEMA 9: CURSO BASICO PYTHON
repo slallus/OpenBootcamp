@@ -13,3 +13,13 @@ p_favoritos = list(sorted(set(paises)))
 print(p_favoritos)
 
 
+En este segundo ejercicio, tenéis que crear una aplicación que obtendrá los elementos impares de 
+una lista pasada por parámetro con filter y realizará una suma de todos estos elementos obtenidos mediante reduce
+
+def impar(numero):
+    return numero % 2 == 1
+
+lista = {1,2,3,4,5}
+
+filtro = list(filter(impar,lista))
+print(sum(filtro))
