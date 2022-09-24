@@ -1,0 +1,43 @@
+#En este ejercicio tenéis que crear una lista de RadioButton que muestre la opción que se ha seleccionado 
+#y que contenga un botón de reinicio para que deje todo como al principio.
+#Al principio no tiene que haber una opción seleccionada.
+
+import tkinter
+from tkinter import ttk
+window = tkinter.Tk()
+
+window.columnconfigure(0,weight=1)
+window.columnconfigure(0, weight=3)
+
+selected = tkinter.StringVar()
+
+##Funciones
+def opcion1(event):
+    print('Has seleccionado la Opcion 1')
+def opcion2(event):
+    print('Has seleccionado la Opcion 2')
+def opcion3(event):
+    print('Has seleccionado la Opcion 3')
+def salir(event):
+    window.quit()
+
+##Radiobutton
+r1 = ttk.Radiobutton(window, text='Opcion1', value='1', variable=selected)
+r2 = ttk.Radiobutton(window, text='Opcion2', value='2', variable=selected)
+r3 = ttk.Radiobutton(window, text='Opcion3', value='3', variable=selected)
+b1 = ttk.Button(window,text='Salir')
+
+#Posicionamiento de los RadioButton
+r1.grid(column=0,row=1,pady=5,padx=5)
+r2.grid(column=0,row=2,pady=5,padx=5)
+r3.grid(column=0,row=3,pady=5,padx=5)
+b1.grid(column=0,row=4,pady=5,padx=5)
+#Evento
+r1.bind('<Button-1>',opcion1)
+r2.bind('<Button-1>',opcion2)
+r3.bind('<Button-1>',opcion3)
+b1.bind('<Button-1>',salir)
+
+window.mainloop()
+
+
