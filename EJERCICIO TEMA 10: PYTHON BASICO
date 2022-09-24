@@ -41,3 +41,44 @@ b1.bind('<Button-1>',salir)
 window.mainloop()
 
 
+
+#En este segundo ejercicio, tendréis que crear una interfaz sencilla la cual debe de
+#contener una lista de elementos seleccionables, también debe de tener un label con el texto que queráis.
+
+import tkinter
+from tkinter import ttk
+window = tkinter.Tk()
+
+window.columnconfigure(0,weight=1)
+window.columnconfigure(0, weight=3)
+
+selected = tkinter.StringVar()
+selected_1 = tkinter.StringVar()
+selected_2 = tkinter.StringVar()
+selected_3 = tkinter.StringVar()
+
+
+#Funciones
+def f_opcion1():
+    print('Has seleccionado la Opcion 1')
+def f_opcion2():
+    print('Has seleccionado la Opcion 2')
+def f_opcion3():
+    print('Has seleccionado la Opcion 3')
+def f_opcion4():
+    print('Has seleccionado la Opcion 4')
+
+##Lista
+lista = ['Opcion1','Opcion2','Opcion3','Opcion4']
+
+##Opciones
+opcion1 = ttk.Checkbutton(window, text=str(lista[0]),variable=selected,command=f_opcion1)
+opcion1.grid(row=0,column=0)
+opcion2 = ttk.Checkbutton(window, text=str(lista[1]),variable=selected_1,command=f_opcion2)
+opcion2.grid(row=1,column=1)
+opcion3 = ttk.Checkbutton(window, text=str(lista[2]),variable=selected_2,command=f_opcion3)
+opcion3.grid(row=2,column=2)
+opcion4 = ttk.Checkbutton(window, text=str(lista[3]),variable=selected_3,command=f_opcion4)
+opcion4.grid(row=3,column=3)
+
+window.mainloop()
