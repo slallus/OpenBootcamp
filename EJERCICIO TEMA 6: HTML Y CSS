@@ -1,0 +1,54 @@
+Crea un nuevo documento HTML con el título "Selectores, pseudo-clases y pseudo-elementos en CSS"
+
+Crea un nuevo fichero CSS e impórtalo en el documento HTML principal
+
+Crea un botón con el texto "Pasa por encima" (TIP: Este texto debes agregarlo a través de un pseudo-elemento)
+
+Utiliza las pseudo-clases para que cuando se pase el ratón por encima de este botón, el texto se vuelva blanco y el fondo de color verde
+
+Utiliza los pseudo-elementos para cambiar el texto del botón a "¡Hecho!"
+
+
+
+/////HTML/////
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores, pseudo-clases y pseudo-elementos en CSS</title>
+    <link rel="stylesheet" href="../css/ejercicio0106.css">
+</head>
+<body>
+    <div class="text">
+    <button id="button-id" class="button-class"></button>
+    </div>  
+</body>
+</html>
+
+
+
+
+/////CSS/////
+
+
+.button-class::before {
+    font-weight: bold;
+    content: 'Pasa por encima';
+}
+
+.button-class:hover {
+    background-color: green;
+    color: rgb(255, 255, 255);
+}
+
+.text .button-class {
+    display: none;
+}
+
+.text::after{
+    content: 'hola';
+}
