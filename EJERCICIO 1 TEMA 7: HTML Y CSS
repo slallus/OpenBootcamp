@@ -1,0 +1,261 @@
+<!-- Replícalo exactamente igual, pero realiza una nueva versión en modo oscuro
+Los colores serán los siguientes
+El rosa se queda igual
+El fondo blanco será sustituido por el color #161717
+El fondo de los inputs tendrá un color #212121
+El fondo de los inputs cuando se hace hover será del color #454045
+Los textos tendrán un color blanco -->
+
+
+
+
+/////HTML/////
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Tema 7</title>
+    <link rel="stylesheet" href="../css/ejercicio0107.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Registrate en los formularios</h3>
+        <div>
+            <button class="google-btn">
+                <picture><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5q0FP74VV9wbfwP378_7kj
+                    7iDomHuKrxkXsxDdUT28V9dlVMNUe-EMzaLwaFhneeuZI&usqp=CAU" alt="logo-google"></picture>
+                <span>Registrarse con Google</span>
+            </button>
+            <button class="twitter-btn">
+                <picture>
+                    <img src="http://www.grandsettlement.org/wp-content/themes/grandstreet/images/twitter-logo.svg" alt="Twitter-logo">
+                </picture>
+            </button>
+        </div>
+        <div class="separator">
+            <hr>
+            <span>o...</span>
+        </div>
+        <form action="" method="">
+            <div>
+                <label for="name">
+                    <span>Name</span>
+                    <input id="name" name="name">
+                </label>
+                <label for="Username">
+                    <span>Username</span>
+                    <input id="Username" name="Username">
+                </label>
+            </div>
+            <label for="email">
+                <span>Email</span>
+                <input id="email" name="email">
+            </label>
+            <label for="password">
+                <span>Password</span>
+                <input id="password" name="password" placeholder="6+ caracteres">
+            </label>
+            <label for="checkbox">
+                <input type="checkbox">
+                <span>Acepta los terminos y condiciones del contrato</span>
+            </label>
+            <button type="submit" class="crear-cuenta-btn">Crear Cuenta</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+/////CSS/////
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #161717;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 450px;
+    margin:auto;
+}
+
+.buttons{
+    align-self: flex-start;
+    display: flex;
+    gap: 20px;
+}
+.google-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+
+}
+
+.google-btn:hover{
+    opacity: 0.75;
+}
+
+.google-btn picture{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn picture img {
+    width: 75%;
+}
+.google-btn span {
+    color: white;
+    padding: 15px;
+    font-weight: 500;
+}
+
+.twitter-btn {
+    color: #bbb;
+    background-color: #eee;
+    border: none;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.twitter-btn picture img{
+    width: 75%;
+}
+.twitter-btn:hover{
+    background-color: #ddd;
+}
+
+.separator {
+    display: flex;
+    width: 100%;
+    gap:15px;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.separator span {
+    color: #8b8b8b;
+}
+
+.section-inputs{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label span{
+    font-weight: 700;
+}
+label input{
+    width: 100%;
+    background-color: #212121;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+.section-input label input{
+    width: 80%;
+    background-color: #212121;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+}
+label input:hover{
+    background-color: #454045;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #a3038e;
+}
+
+label input:focus{
+    background-color: #212121;
+    border: solid 1px #f3f3f4;
+    box-shadow: 0 0 4px #a3038e;
+}
+
+.checkbox-label {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+}
+
+.checkbox-label span{
+    font-weight: 400;
+}
+.submit-btn{
+    background-color: #212121;
+    color: #212121;
+    text-align: center;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14pt;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;    
+}
+
+.submit-btn:hover{
+    opacity: 0.75;
+}
+
+.crear-cuenta-btn{
+    background-color: grey;
+    font-size: large;
+    color: white;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.crear-cuenta-btn:hover{
+    opacity: 0.75;
+    background-color: blue;
+}
