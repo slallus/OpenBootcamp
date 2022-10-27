@@ -31,13 +31,12 @@ La disposición de los elementos de la barra lateral se vuelva horizontal
     <link rel="stylesheet" href="../css/ejercicio0110.css">
 </head>
 <body>
-    <h1>Ejercicio 10</h1>
-    <div class="contenedor">
-        <div class="item1 item izq">Item1</div>
-        <div class="item2 item izq">Item2</div>
-        <div class="item3 item izq">Item3</div>
-        <div class="item4 item der">Seccion Principal</div>
+    <div class="izq">
+        <div class="item1 item">Item1</div>
+        <div class="item2 item">Item2</div>
+        <div class="item3 item">Item3</div>
     </div>
+    <div class="principal">Seccion Principal</div>
 </body>
 </html>
 
@@ -52,31 +51,27 @@ La disposición de los elementos de la barra lateral se vuelva horizontal
         grid-column: 1/4;
         grid-row: 1/4;
     }
-
-.contenedor{
-    display: grid;
-    gap: 0.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5rem 5rem 5rem;
+}
+body{
+    display: flex;
+    font-size: 3rem;
+}
+.izq{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
 }
 
-.item{
-    border: solid 1px black;
+.principal{
+    background-color: aquamarine;
+    flex-grow: 1;
 }
-.item1{
-    grid-column: 1/1;
-    grid-row: 1/1;
-}
-.item2{
-    grid-column: 1/1;
-    grid-row: 2/2;
-}
-.item3{
-    grid-column: 1/1;
-    grid-row: 3/3;
-}
-.item4{
-    grid-column: 2/2;
-    grid-row: 1/4;
-    flex-grow: 10;
+
+@media (max-width: 640px) {
+    body{
+        flex-direction: column-reverse;
+    }
+    .izq{
+        flex-direction: row;
+    }
 }
